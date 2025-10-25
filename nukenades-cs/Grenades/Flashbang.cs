@@ -44,6 +44,10 @@ public class Flashbang(Main plugin) {
             @event.Weapon = "flashbang";
             @event.Headshot = false;
             
+            if (thrower.IsValid && thrower.ActionTrackingServices != null) {
+                thrower.ActionTrackingServices.MatchStats.Kills++;
+            }
+            
             plugin.Logger.LogInformation("Fixed death event: {VictimPlayerName} killed by {ThrowerPlayerName}'s flashbang", victim.PlayerName, thrower.PlayerName);
             _pendingFlashKills.Remove(victim);
         }
