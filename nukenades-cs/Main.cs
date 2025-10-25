@@ -23,7 +23,7 @@ public class Main : BasePlugin {
         
         RegisterEventHandler<EventHegrenadeDetonate>(_heGrenade.OnHEGrenadeDetonate);
         RegisterEventHandler<EventFlashbangDetonate>(_flashbang.OnFlashBangDetonate);
-        RegisterEventHandler<EventPlayerDeath>(_flashbang.OnPlayerDeath);
+        RegisterEventHandler<EventPlayerDeath>(_flashbang.OnPlayerDeath, HookMode.Pre);
     
         if (hotReload) {
             Logger.LogInformation("Plugin hot reloaded successfully!");
