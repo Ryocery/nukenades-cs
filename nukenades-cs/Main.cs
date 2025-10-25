@@ -8,7 +8,7 @@ namespace nukenades_cs;
 [MinimumApiVersion(80)]
 public class Main : BasePlugin {
     public override string ModuleName => "NukeNades";
-    public override string ModuleVersion => "1.0.0";
+    public override string ModuleVersion => "1.1.0";
     public override string ModuleAuthor => "Ryocery";
     public override string ModuleDescription => "Makes HE and Flashbang grenades instantly kill.";
     
